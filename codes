@@ -5,3 +5,14 @@ for i in range(1, num + 1):
     fact *= i
 
 print("Factorial of", num, "is", fact)
+
+
+class fel {
+ public static void main(String[] args) {
+  double a = Double.parseDouble(args[0]);
+  double b = Double.parseDouble(args[1]);
+  System.out.println("Sum = " + (a + b));
+  System.out.println("Difference = " + (a - b));
+ 
+ }
+}

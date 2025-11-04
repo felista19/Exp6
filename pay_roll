@@ -1,10 +1,21 @@
 1. Open power shell
 2. Install scoop by following commands
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser ----------llows PowerShell to run scripts downloaded from the internet (only those signed or created locally).
+Necessary for installing Scoop.
+
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
 3. Install hookdeck using scoop
+
 scoop bucket add hookdeck https://github.com/hookdeck/scoop-hookdeck-cli.git
+
 scoop install hookdeck
+Hookdeck lets you capture and forward webhook events locally — useful for testing GitHub webhooks.
+Installs the Hookdeck CLI tool so you can run commands like hookdeck listen.
+
 4. Use hookdeck listen to get payload URL
 hookdeck listen 8080
+Starts a local Hookdeck listener on port 8080.
+
+Hookdeck generates a temporary public URL that forwards requests to your local server.
 5. Copy URL into payload URL of webhook on GitHub repository

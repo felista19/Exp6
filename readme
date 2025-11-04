@@ -1,0 +1,7 @@
+| Step | Command                              | Purpose            |
+| ---- | ------------------------------------ | ------------------ |
+| 1    | `FROM ubuntu:latest`                 | Base image         |
+| 2    | `RUN apt install nginx -y`           | Install Nginx      |
+| 3    | `COPY index.html ...`                | Add your webpage   |
+| 4    | `EXPOSE 80`                          | Web server port    |
+| 5    | `CMD ["nginx", "-g", "daemon off;"]` | Start Nginx server |

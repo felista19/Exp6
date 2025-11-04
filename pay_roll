@@ -1,0 +1,10 @@
+1. Open power shell
+2. Install scoop by following commands
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+3. Install hookdeck using scoop
+scoop bucket add hookdeck https://github.com/hookdeck/scoop-hookdeck-cli.git
+scoop install hookdeck
+4. Use hookdeck listen to get payload URL
+hookdeck listen 8080
+5. Copy URL into payload URL of webhook on GitHub repository
